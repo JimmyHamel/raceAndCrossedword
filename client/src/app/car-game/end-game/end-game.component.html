@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>Vous avez terminé la course avec un temps de : {{formatTime(endGameService.players[endGameService.findPlayerOrderOfArrival()].totalTime)}}</h1>
+  <div class="result">
+    <p> Tableau des résultats de la course :</p>
+    <p>Vous avez terminé en {{endGameService.findPlayerOrderOfArrival()+1}} position</p>
+    <ul>
+      <li *ngFor="let player of endGameService.players, let i = index">
+        <p>Joueur {{player.name}}</p>
+        <p>Temps total : {{formatTime(player.totalTime)}}</p>
+        <ul>
+          <li *ngFor="let lap of player.lapTimes, let j = index">
+            <p>Lap {{j+1}} : {{lap}}</p>
+          </li>
+        </ul>
+    </ul>
+  </div>
+
+  <div class="highScore">
+    <p> ************************************** </p>
+    <p>Tableau des meilleurs temps de la piste : {{highscoreService.trackService.currentTrack.name}}</p>
+    <ul>
+      <li *ngFor="let score of highscoreService.getHighScores(), let i = index">
+        {{i+1}} : {{formatTime(score.time)}} -- {{score.by}}
+      </li>
+    </ul>
+    <p> ************************************** </p>
+
+    <div *ngIf="endGameService.findPlayerOrderOfArrival() > 0">
+      <p>Vous devez arriver le premier afin d'établir un record.</p>
+    </div>
+
+    <div *ngIf="endGameService.findPlayerOrderOfArrival() == 0">
+      <p *ngIf="endGameService.players[endGameService.findPlayerOrderOfArrival()].totalTime >= highscoreService.getHighScores()[4].time">Pas de record, cette fois-ci. Meilleur chance la prochaine fois !</p>
+      <div *ngIf="endGameService.players[endGameService.findPlayerOrderOfArrival()].totalTime < highscoreService.getHighScores()[4].time || highscoreService.getHighScores()[0].time == 0">
+        <h3>Nouveau meilleur temps !</h3>
+        <span *ngIf="!hasValidateOneTime">
+        <p>Entrez votre nom et confirmez pour entrer dans le classement</p>
+          <input placeholder="Entrez votre nom" #nameInput>
+          <button (click)="validateName(nameInput.value)">Confirmer</button>
+        </span>
+        <p *ngIf="hasValidateOneTime">Ajout effectué sans erreur</p>
+      </div>
+    </div>
+    <p> ************************************** </p>
+  </div>
+  <div class="button-container">
+    <a href="/{{replayUrl}}" class="custom-button">Rejouer</a>
+    <a href="/home" class="custom-button">Accueil</a>
+  </div>
+</div>

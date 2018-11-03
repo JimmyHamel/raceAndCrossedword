@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h1>Liste des parties en cours</h1>
+  <ul>
+    <li class="room" *ngFor="let room of roomService.rooms()">
+      <p class="name"> {{room.name}}</p>
+      <p>{{room.playersname}} </p>
+      <p>{{difficulty[room.difficulty]}} </p>
+      <p>{{room.playerPresent}}/{{room.playerTotal}}</p>
+      <button (click)="joinRoom(room.name)"> Rejoindre </button>
+    </li>
+  </ul>
+</div>

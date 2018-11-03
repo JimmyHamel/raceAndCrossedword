@@ -1,0 +1,27 @@
+<div (click)="onClick($event)">
+  <div class="cw-infos-on-game-container">
+    <app-stats-panel></app-stats-panel>
+  </div>
+  <div class="cw-clues-container">
+    <span class="clue-title">Horizontal</span>
+    <app-clues [orientation]="orientation[0]"></app-clues>
+  </div>
+  <div class="board-and-numbers-container">
+    <div class="numbers-on-left-container">
+      <div *ngFor="let num of numbers,let i=index" class="numbers-on-left">{{i+1}}</div>
+    </div>
+
+    <div class="numbers-on-top-container">
+      <div *ngFor="let num of numbers,let i=index" class="numbers-on-top">{{i+1}}</div>
+    </div>
+
+    <div class="cw-board-container">
+      <app-grid></app-grid>
+    </div>
+  </div>
+
+  <div class="cw-clues-container">
+    <span class="clue-title">Vertical</span>
+    <app-clues [orientation]="orientation[1]"></app-clues>
+  </div>
+</div>

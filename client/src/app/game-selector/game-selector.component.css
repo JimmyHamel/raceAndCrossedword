@@ -1,0 +1,66 @@
+.wrapper {
+   width: 80%;
+   margin: auto;
+   font-family: 'Roboto', sans-serif;
+   text-align: center;
+}
+.game-info {
+    display: inline-block;
+    width: 500px;
+    height: 600px;
+}
+
+.game-info h1 {
+    font-size: 30px;
+}
+
+.game-info img {
+    height: 150px;
+    font-size: 20px;
+}
+
+.game-info .description {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.game-info .play-btn {
+    width: 100px;
+    height: auto;
+    font-size: 20px;
+}
+.game-mode{
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+.game-mode .mode-element {
+    /*padding-left: 20%;*/
+    width: 45%;
+    float: left;
+    align-content: center;
+}
+.diffculty{
+    text-align: left;
+}
+
+.custom-button {
+    /*background-color: rgb(200, 200, 200);
+    color: black;*/
+    color: white;
+    background-color: rgb(10,10,10);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100px;
+}
+a:hover{
+    background-color: rgb(30, 30, 30);
+    /*background-color: rgb(180, 180, 180);*/
+}
+li{
+    list-style-type: none;
+}

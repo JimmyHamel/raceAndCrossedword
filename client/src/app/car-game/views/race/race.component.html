@@ -1,0 +1,21 @@
+<div class="scene" appEditorDirective #container>
+
+    <div class="countdown">
+        <app-track-countdown></app-track-countdown>
+    </div>
+
+    <div class="laps">
+        <app-lap-panel></app-lap-panel>
+    </div>
+
+    <div class="controls">
+        <app-controls-panel></app-controls-panel>
+    </div>
+
+    <div class="stats-car">
+        <p>Vitesse : {{roundSpeed(renderService.scene.car.speed.length()*3.6)}} km/h <p>
+        <p>Rpm : {{roundSpeed(renderService.scene.car.rpm)}} </p>
+        <p>Gear : {{renderService.scene.car.currentGear + 1}}</p>
+    </div>
+
+</div>

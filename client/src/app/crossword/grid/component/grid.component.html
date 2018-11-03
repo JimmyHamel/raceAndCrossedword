@@ -1,0 +1,21 @@
+<div [ngGrid]="initialiserService.gridConfig">
+    <div *ngFor="let box of gridService.grid.boxes; let i = index" [(ngGridItem)]="box.config" (click)="onClick(box,value)" (keyup)="onKeyUp(box,$event)">
+        <input *ngIf="box.isWritable" 
+                [ngClass]="{
+                'has-word-focus-1p': box.hasWordFocus[0],'word-valid-1p' : box.isWordValid[0],
+                'has-word-focus-2p': box.hasWordFocus[1],'word-valid-2p' : box.isWordValid[1]
+                }"
+                class="cw-board-item default_border writable" 
+                minlength="1" 
+                maxlength="1"
+                [ngModel]="box.value"
+                (ngModelChange)="show($event)"
+                id={{i}}
+                [disabled]="box.isWordValid[0]||box.isWordValid[1]"
+                appInputVerificatorDirective
+                (emitter)="box.value=$event">
+        <div *ngIf="!box.isWritable" class="cw-board-item default_border not-writable" id={{i}}></div>
+    </div>
+</div>
+
+

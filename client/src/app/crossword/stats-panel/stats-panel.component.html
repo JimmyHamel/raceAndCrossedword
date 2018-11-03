@@ -1,0 +1,29 @@
+<div class="col">
+    <p *ngIf="playerService.number == 0"> Difficulty : {{difficulty[infoService.gridDifficulty]}}</p>
+    <p *ngIf="playerService.number > 0"> Difficulty : {{difficulty[roomService.rooms()[roomIndex].difficulty]}}
+    <p *ngIf="playerService.number > 0"> Room : {{roomService.rooms()[roomIndex].name}} </p>
+    <div class = "cheat-mode-container">
+        <input type="checkbox" (click)="onClick()"> <span>CheatMode</span>
+    </div>
+</div>
+<!--> Singleplayer <-->
+<span *ngIf="playerService.number == 0">
+    <div class="col">
+        <p> # of word found by {{playerService.name}}: {{infoService.wordCount[0]}} </p>
+        <p> # of word left to find : {{infoService.wordCount[2]}} </p>
+    </div>
+</span>
+<!--> Multiplayer <-->
+<span *ngIf="playerService.number > 0">
+    <div class="col">
+        <p> # of word found by {{roomService.rooms()[roomIndex].playersname[0]}}: {{infoService.wordCount[0]}} </p>
+        <p> # of word left to find : {{infoService.wordCount[2]}} </p>
+    </div>
+    <div class="col">
+        <p> # of word found by {{roomService.rooms()[roomIndex].playersname[1]}}: {{infoService.wordCount[1]}} </p>
+        <p> # of word left to find : {{infoService.wordCount[2]}} </p>
+    </div>
+</span>
+
+
+    

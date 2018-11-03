@@ -1,0 +1,11 @@
+export const W_KEYCODE: number = 87;
+export const A_KEYCODE: number = 65;
+export const S_KEYCODE: number = 83;
+export const D_KEYCODE: number = 68;
+export const C_KEYCODE: number = 67;
+export const N_KEYCODE: number = 78;
+export const PLUS_KEYCODE: number = 187;
+export const MINUS_KEYCODE: number = 189;
+export const LEFT_CLICK_KEYCODE: number = 0;
+export const RIGHT_CLICK_KEYCODE: number = 2;
+export const MOUSE_MOVE_KEYCODE: number = 999;

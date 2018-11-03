@@ -1,0 +1,22 @@
+<div style="text-align:center"></div>
+<div class='wrapper'>
+  <div class='game-info' *ngFor="let game of games">
+    <h1 class='title'>{{game.title}}</h1>
+    <img src={{game.image_url}}>
+    <p class='description'>{{game.description}}</p>
+
+    <ul class="game-mode">
+      <div class="col-mode">
+        <li class="mode-element" *ngFor="let mode of game.gamemode_name,let i = index">
+          <h2>{{mode}}</h2>
+
+          <ul>
+            <li class="diffculty" *ngFor="let opt of game.options_name[i], let j = index">
+              <a class="custom-button" routerLink={{game.game_url}}{{game.gamemode_url[i]}}{{game.options_url[i][j]}} routerLinkActive="active">{{opt}}</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>

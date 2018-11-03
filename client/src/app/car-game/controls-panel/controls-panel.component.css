@@ -1,0 +1,11 @@
+div{
+    color: white;
+    background-color: rgba(100, 100, 100, 0.250);
+    z-index: 1;
+    height: 120px;
+    width: 200px;
+}
+p{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}

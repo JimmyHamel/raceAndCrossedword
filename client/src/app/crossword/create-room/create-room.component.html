@@ -1,0 +1,18 @@
+<h1>Création d'une partie multijoueur</h1>
+<p>
+  <span [ngClass]="{'invalid' : invalid[0]}"> Nom de la partie : </span>
+  <input #nameRoom class="name">
+</p>
+<p>
+  <span [ngClass]="{'invalid' : invalid[1]}"> Difficulté : </span>
+  <span *ngFor="let diff of difficulty, let i=index">
+    <input type="radio" name="diff" value={{diff}} (click)="onClickRadio(i)">
+    <span>{{diff}}</span>
+  </span>
+</p>
+<p>
+  <span [ngClass]="{'invalid' : invalid[2]}"> Entrer votre nom : </span>
+  <input #namePlayer>
+</p>
+<button (click)="validForm(nameRoom.value, namePlayer.value)">Creer</button>
+<button (click)="validDefault()">Default</button>

@@ -1,0 +1,27 @@
+<div class="track-information">
+  <h1>{{track.name}}</h1>
+  <p class="track-description"> {{track.description}} </p>
+  <p>Course de <strong>{{track.type}}</strong></p>
+  <p>La piste à été jouée <strong>{{track.playedCount}}</strong> fois</p>
+  <div>Liste des highscores:
+    <thead align="center">
+      <tr>
+        <th>
+          Temps
+        </th>
+        <th>
+          Utilisateur
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let highscore of track.highscores ">
+        <td>{{formatTime(highscore.time)}}</td>
+        <td>{{highscore.by}}</td>
+    </tbody>
+  </div>
+</div>
+<div class="preview-window">
+  <div class="scene" appEditorDirective #container></div>
+</div>
+

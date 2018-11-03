@@ -1,0 +1,14 @@
+<div>
+  <ul>
+    <li *ngFor="let clue of clues.clues" 
+        (click)="onClick(clue)"
+        [ngClass]="{
+          'selected-1p' : clue.isSelected[0], 'completed-1p' : clue.isCompleted[0],
+          'selected-2p' : clue.isSelected[1], 'completed-2p' : clue.isCompleted[1]
+        }"
+        id={{clue.id}}>
+        <span *ngIf="infoService.cheatMode"> <span class="clueTagSpan">{{clue.clueTag}}-</span> {{clue.word}} </span>
+        <span *ngIf="!infoService.cheatMode"> <span class="clueTagSpan">{{clue.clueTag}}-</span> {{clue.definition}} </span>
+    </li>
+  </ul>
+</div>

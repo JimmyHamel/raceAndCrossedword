@@ -1,0 +1,10 @@
+<form>
+    <span class="label">Nom de la piste:</span><input [(ngModel)]="trackNameInput" name="name"/>
+    <span class="label">Description:</span><input [(ngModel)]="trackDescriptionInput" name="description"/>
+    <input type="radio" class="radio" [(ngModel)]="type" name="type" value="jour"> Jour
+    <input type="radio" class="radio" [(ngModel)]="type" name="type" value="nuit"> Nuit
+    <button [disabled]="!isSaveable" (click)="onSave()"> Sauvegarder </button>
+</form>
+
+
+<div class="scene" appEditorDirective #container></div>

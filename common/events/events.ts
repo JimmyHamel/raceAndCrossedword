@@ -1,0 +1,12 @@
+export const CONNECTION: string = "connection";
+export const CONNECTION_SUCCEEDED: string = "connection succeded";
+export const WORD_COMPLETE: string = "word complete";
+export const NEW_ROOM: string = "new room";
+export const JOIN_ROOM: string = "join room";
+export const DISCONNECTING: string = "disconnect";
+export const ROOM_LIST_UPDATE: string = "room list update";
+export const SEND_GRID: string = "sending grid";
+export const ERROR: string = "error grid";
+export const WORD_SELECTED: string = "word selected";
+export const REPLAY: string = "replay";
+export const NEW_GRID: string = "new grid";

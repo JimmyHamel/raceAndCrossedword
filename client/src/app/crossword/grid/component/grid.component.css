@@ -1,0 +1,91 @@
+.grid {
+    position: absolute;
+}
+.grid-item {
+    position: relative;
+}
+inout{
+    color:black;
+}
+.placeholder {
+    position: absolute;
+}
+.cw-board-item{
+    box-sizing: border-box;
+    height: 40px;
+    width:  40px;
+    border: 0px;
+    padding: 0px;
+    position: relative;
+}
+.writable{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;  
+    text-transform: uppercase;
+    color:black;
+}
+.not-writable{
+    background-color: black;
+}
+.default_border{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+.has-word-focus-1p{
+    /*transition-duration: 0.4s;*/
+    box-sizing: border-box;
+    font-weight: bold;
+    border: 3px solid  rgb(190, 0, 0);
+    /*
+    border: 2px solid  rgb(0, 45, 55);
+    background-color: rgb(0, 130, 150);
+    */
+}
+.has-word-focus-2p{
+    /*transition-duration: 0.4s;*/
+    box-sizing: border-box;
+    font-weight: bold;
+    border: 3px solid  rgb(20, 0, 150);
+    /*
+    border: 2px solid  rgb(55, 0, 45);
+    background-color: rgb(150, 0, 130);
+    */
+}
+.has-word-focus-1p.has-word-focus-2p{
+    transition-duration: 0.4s;
+    box-sizing: border-box;
+
+    background-image: url("../../../../assets/image-border/double_focus.png");
+    background-size: 36px;
+    /*
+    border: 2px solid  rgb(55, 55, 0);
+    background-color: rgb(150, 150, 0);
+    */
+}
+.word-valid-1p{
+    background-color: rgb(196, 106, 106);
+   /* background-color: rgb(90, 130, 150);*/
+}
+.word-valid-2p{
+    background-color: rgb(108, 95, 180);
+    /*background-color: rgb(150, 90, 130);*/
+}
+.word-valid-1p.word-valid-2p{
+    transition-duration: 0.4s;
+    box-sizing: border-box;
+    font-weight: bold;
+
+    background-image: url("../../../../assets/image-border/double_valid.png");
+    /*background-color: rgb(150, 150, 90);*/
+}
+
+/*
+rgb(90, 130, 150);
+rgb(0, 45, 55);
+rgb(0, 130, 150);
+
+rgb(150, 90, 130);
+rgb(55, 0, 45);
+rgb(150, 0, 130);
+*/

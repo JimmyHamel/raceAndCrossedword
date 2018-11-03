@@ -1,0 +1,10 @@
+div{
+    background-color: rgba(100, 100, 100, 0.250);
+    width: 150px;
+    color:white;
+    font-weight: bold;
+    z-index: 1;
+}
+p{
+    margin-left: 15px;
+}

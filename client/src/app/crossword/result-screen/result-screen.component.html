@@ -1,0 +1,15 @@
+<div *ngIf="infoService.victory">
+  Vous avez gagné =)
+</div>
+
+<div *ngIf="!infoService.victory">
+  Vous avez perdu =( 
+</div>
+
+<span *ngIf="playerService.number == 0">
+  <button (click)="replay()" >Rejouer avec la meme configuration</button>
+</span>
+
+<span *ngIf="playerService.number > 0">
+  <button (click)="replayMultiplayer()" >Rejouer avec le meme adversaire</button>
+</span>

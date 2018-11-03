@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body, html {
+    font-family: 'Roboto';
+    padding: 0;
+    margin: 0;
+  }
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 75px;
+}

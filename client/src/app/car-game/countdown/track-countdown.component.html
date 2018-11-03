@@ -1,0 +1,5 @@
+<h1 *ngIf="countdownValue > -1"
+    [ngClass] = "{'one': countdownValues[2] ,'two':  countdownValues[3] ,'three':  countdownValues[4] }">
+    <span *ngIf="countdownValue > 1">{{countdownValue-1}}</span>
+    <span *ngIf="countdownValue == 1"> GO </span>
+</h1>

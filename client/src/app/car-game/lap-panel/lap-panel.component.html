@@ -1,0 +1,8 @@
+<div *ngIf="lapService.ready">
+  <p>Lap {{lapService.playerCounterService.currentLap+1}} / {{lapService.playerCounterService.totalLap}}</p>
+  <p> Total : {{lapService.playerCounterService.timer.toString()}} </p>
+  <span *ngFor="let time of lapService.playerCounterService.timersLap, let i = index">
+    <p> Lap{{i+1}} : {{time.toString()}} </p>
+  </span>
+</div>
+
