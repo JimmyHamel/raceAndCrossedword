@@ -19,16 +19,6 @@ Exécuter `npm test` pour lancer les tests unitaires avec [Mocha](https://mochaj
 ## Exécution de TSLint
 Exécuter `npm run lint` pour lancer TSLint.
 
-## Aide supplémentaire
-Pour obtenir de l'aide supplémentaire sur Angular CLI, utilisez `ng help` ou [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-Pour des questions reliées à la correction de la qualité, demandez à Dylan(dylan.farvaque@polymtl.ca) et Mathieu(mathieu-4.tremblay@polymtl.ca).
-
-Pour des questions reliées à la correction des fonctionnalités, demandez à Nikolay(nikolay.radoev@polymtl.ca) et Emilio(emilio.rivera@polymtl.ca).
-
-# Standards de programmations
-Cette section présente les différents standards de programmations que vous devez respecter lors de la réalisation de ce projet et qui seront utilisés pour la correction de l'assurance qualité de votre projet.
-
 ## Indentation
 Les fichiers .html doivent être indentés avec 2 espaces.
 
@@ -89,23 +79,6 @@ Une fonction devrait avoir 3 paramètres ou moins.
 
 Séparez votre code Typescript du CSS et du HTML.
 
-## GIT
-Une seule fonctionnalité par branche.
-
-Une branche fonctionnalité devrait se nommer `feature/nom-du-feature`.
-
-Une branche correction de bogue devrait se nommer `hotfix/nom-du-bug`.
-
-Les messages de commit doivent être courts et significatifs.
-
-Vous devez utiliser votre nom complet comme auteur de vos commit et garder le même courriel, peu importe l'ordinateur que vous utilisez. Il ne devrait donc pas y avoir plus de 6 contributeurs dans votre repo.
-
-Nous vous recommandons fortement de suivre le [Github-Flow](https://guides.github.com/introduction/flow/). [Lecture suggérée](http://scottchacon.com/2011/08/31/github-flow.html)
-
-
-## Lectures suggérées
-[AntiPatterns](https://sourcemaking.com/antipatterns) (plus spécifiquement [Software Development AntiPatterns](https://sourcemaking.com/antipatterns/software-development-antipatterns))
-
 # Touches à utiliser
 
 Cette liste de touches sert à standardiser les jeux et ainsi faciliter la correction. Un non respect de la touche sera considéré comme une fonctionnalité non livrée au client (note de 0).
@@ -122,9 +95,7 @@ Cette liste de touches sert à standardiser les jeux et ainsi faciliter la corre
 |     Zoom arrière     	|    -   	|
 | Changement de caméra 	|    C   	|
 
-# Cadriciel
-
-Nous vous avons fourni plusieurs pièces de code.
+ vous avons fourni plusieurs pièces de code.
 
 ## Course
 
@@ -145,6 +116,3 @@ Nous avons aussi ajouté une transmission automatique, qui change les vitesses d
 
 La majorité des formules ont étés obtenues à partir de [Engineering Toolbox](https://www.engineeringtoolbox.com) et de [Car physics for games](http://www.asawicki.info/Mirror/Car%20Physics%20for%20Games/Car%20Physics%20for%20Games.html)
 
-## Général
-
-Un service de base effectuant une requête http vers le serveur vous est fourni.
